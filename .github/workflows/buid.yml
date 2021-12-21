@@ -27,14 +27,11 @@ jobs:
         os: [windows-2019]
         node: [16]
     steps:
-      - name: Fetch Codebase
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node }}
-          check-latest: true
       - name: Command
         run: |
+          Cd C:\Program Files\LLVM
+          Dir
+          Cd C:\Program Files\LLVM\bin
+          Dir
           Get-Command clang
           Get-Command cmake
