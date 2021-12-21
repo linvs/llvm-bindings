@@ -30,4 +30,4 @@ jobs:
       - name: Command
         run: |
           Cd "C:\Program Files\LLVM\lib\cmake\llvm"
-          Dir
+          Get-Content LLVMConfigExtensions.cmake
