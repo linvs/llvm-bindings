@@ -29,5 +29,4 @@ jobs:
     steps:
       - name: Command
         run: |
-          Cd "C:\Program Files\LLVM\lib\cmake\llvm"
-          Get-Content LLVMConfigExtensions.cmake
+          tree /F "C:\Program Files\LLVM"
