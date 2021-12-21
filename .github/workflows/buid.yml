@@ -29,11 +29,5 @@ jobs:
     steps:
       - name: Command
         run: |
-          Cd "C:\Program Files\LLVM\include"
-          Dir
-          Cd "C:\Program Files\LLVM\lib"
-          Dir
-          Cd "C:\Program Files\LLVM\libexec"
-          Dir
-          Cd "C:\Program Files\LLVM\share"
+          Cd "C:\Program Files\LLVM\lib\cmake"
           Dir
