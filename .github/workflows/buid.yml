@@ -29,9 +29,7 @@ jobs:
     steps:
       - name: Command
         run: |
-          Cd C:\Program Files\LLVM
+          Cd "C:\Program Files\LLVM"
           Dir
-          Cd C:\Program Files\LLVM\bin
+          Cd "C:\Program Files\LLVM\bin"
           Dir
-          Get-Command clang
-          Get-Command cmake
