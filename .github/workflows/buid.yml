@@ -29,5 +29,5 @@ jobs:
     steps:
       - name: Command
         run: |
-          Cd "C:\Program Files\LLVM\lib\cmake"
+          Cd "C:\Program Files\LLVM\lib\cmake\llvm"
           Dir
