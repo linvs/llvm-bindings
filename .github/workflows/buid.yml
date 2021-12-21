@@ -1,0 +1,40 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - '**'
+    paths-ignore:
+      - '*.md'
+      - 'LICENSE'
+    tags-ignore:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+    paths-ignore:
+      - '*.md'
+      - 'LICENSE'
+    tags-ignore:
+      - '**'
+
+jobs:
+  build_on_windows:
+    name: Node.js ${{ matrix.node }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-2019]
+        node: [16]
+    steps:
+      - name: Fetch Codebase
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+          check-latest: true
+      - name: Command
+        run: |
+          Get-Command clang
+          Get-Command cmake
