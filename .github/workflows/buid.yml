@@ -29,4 +29,10 @@ jobs:
     steps:
       - name: Command
         run: |
-          tree /F "C:\Program Files\LLVM"
+          choco install wget
+          wget https://github.com/llvm/llvm-project/releases/download/llvmorg-13.0.0/llvm-13.0.0.src.tar.xz
+          tar -zxvf llvm-13.0.0.src.tar.xz
+          Cd llvm-13.0.0.src
+          cmake -S .-B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build
+          cmake --install build
